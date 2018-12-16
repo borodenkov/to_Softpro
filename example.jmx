@@ -17,15 +17,6 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
-        <collectionProp name="CookieManager.cookies"/>
-        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
-      </CookieManager>
-      <hashTree/>
-      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-        <collectionProp name="HeaderManager.headers"/>
-      </HeaderManager>
-      <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="UTG: oracle" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="330239981">
@@ -890,7 +881,7 @@ vars.put(&quot;varRandomStringTitle&quot;, &quot;${__RandomString(20,qwertyuiopa
           <hashTree>
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="varURL" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-              <stringProp name="RegexExtractor.refname">varURL</stringProp>
+              <stringProp name="RegexExtractor.refname">var_url</stringProp>
               <stringProp name="RegexExtractor.regex">url\?q=http://(.*?)\&amp;amp</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default">0</stringProp>
@@ -921,7 +912,7 @@ vars.put(&quot;varRandomStringTitle&quot;, &quot;${__RandomString(20,qwertyuiopa
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">${varURL}</stringProp>
+            <stringProp name="HTTPSampler.domain">${var_url}</stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
